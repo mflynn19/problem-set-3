@@ -27,8 +27,8 @@ public class ProblemSet3 {
 		ps3.fizzString("fig");
 		ps3.squirrelPlay(95, true);
 		ps3.fizzStringAgain(15);
-		/*ps3.makeBricks();
-		ps3.loneSum();
+		ps3.makeBricks(3, 1, 8);
+		/*ps3.loneSum();
 		ps3.luckySum();
 		ps3.factorialFor();
 		ps3.factorialWhile();
@@ -161,7 +161,19 @@ public class ProblemSet3 {
 	 */
 	
 	public void makeBricks(int small, int big, int goal) {
-		
+		while (goal >= 5 && big >= 1) {
+			goal = goal - 5;
+			big--;
+		}
+		while (goal >= 1 && small >= 1) {
+			goal = goal - 1;
+			small--;
+		}
+		if (goal == 0) {
+			System.out.println("YES.");
+		} else {
+			System.out.println("NO.");
+		}
 	}
 	
 	/*
@@ -174,7 +186,9 @@ public class ProblemSet3 {
 	 */
 	
 	public void loneSum(int a, int b, int c) {
-		
+		if (( a == b || a == c) || (b == c)) {
+			
+		}
 	}
 	
 	/*
