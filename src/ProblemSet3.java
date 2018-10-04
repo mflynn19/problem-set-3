@@ -28,12 +28,12 @@ public class ProblemSet3 {
 		ps3.squirrelPlay(95, true);
 		ps3.fizzStringAgain(15);
 		ps3.makeBricks(3, 1, 8);
-		/*ps3.loneSum();
-		ps3.luckySum();
-		ps3.factorialFor();
-		ps3.factorialWhile();
-		ps3.isPrime(); 
-		*/
+		ps3.loneSum(3,3,3);
+		ps3.luckySum(1,13,3);
+		ps3.factorialFor(5);
+		ps3.factorialWhile(5);
+		ps3.isPrime(1); 
+		
 	}
 	
 	/*
@@ -186,9 +186,23 @@ public class ProblemSet3 {
 	 */
 	
 	public void loneSum(int a, int b, int c) {
-		if (( a == b || a == c) || (b == c)) {
-			
+		int total;
+		if (( a == b || a == c) && (b == c)) {
+			total = 0;
 		}
+		else if (( a == b && a != c)) {
+			total = c;
+		}
+		else if (( a == c && b != c)) {
+			total = b;
+		}
+		else if (( b == c && a != c)) {
+			total = a;
+		}
+		else {
+			total = a + b + c;
+		}
+		System.out.println(total);
 	}
 	
 	/*
@@ -202,7 +216,23 @@ public class ProblemSet3 {
 	 */
 	
 	public void luckySum(int a, int b, int c) {
-		
+		int total;
+		if (a != 13 && b != 13 && c != 13) {
+			total = a + b + c;
+			System.out.println(total);
+		}
+		else if (a == 13) {
+			total = a;
+			System.out.println(total);
+		}
+		else if (a != 13 && b == 13) {
+			total = a;
+			System.out.println(total);
+		}
+		else if (a != 13 && b != 13 && c ==13) {
+			total = a + b;
+			System.out.println(total);
+		}
 	}
 	
 	/*
@@ -215,7 +245,11 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialFor(int n) {
-		
+		long x= 1;
+		for (int i = 1; i <= n; i++) {
+			x = i*x;
+		}
+		System.out.println(x);
 	}
 	
 	/*
@@ -229,7 +263,14 @@ public class ProblemSet3 {
 	 */
 	
 	public void factorialWhile(int n) {
-		
+		long x = 1;
+        int i = 1;
+        while(i<=n)
+        {
+            x = x * i;
+            i++;
+        }
+		System.out.println(x);
 	}
 	
 	/*
@@ -242,6 +283,24 @@ public class ProblemSet3 {
 	 */
 	
 	public void isPrime(int n) {
-		
+		boolean isPrime = true;
+		int k;
+		if (n==1 || n == 0) {
+			System.out.println("NOT PRIME");
+		}
+		for(int i = 2;i <= n/2; i++)
+		{
+	           k= n % i;
+	           if(k == 0) {
+	        	   isPrime = false;
+	        	   break;
+	           }
+		}
+		if(isPrime) {
+			System.out.println("PRIME");
+		}
+		else {
+		   System.out.println("NOT PRIME");
+		}
 	}
 }
