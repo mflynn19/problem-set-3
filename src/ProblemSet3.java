@@ -24,7 +24,7 @@ public class ProblemSet3 {
 	public static void main(String[] args) {
 		ProblemSet3 ps3 = new ProblemSet3();
 		ps3.dateFashion(5,10);
-		ps3.fizzString("fig");
+		ps3.fizzString("buzz");
 		ps3.squirrelPlay(95, true);
 		ps3.fizzStringAgain(15);
 		ps3.makeBricks(3, 1, 8);
