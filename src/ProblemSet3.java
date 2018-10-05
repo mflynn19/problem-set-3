@@ -30,10 +30,9 @@ public class ProblemSet3 {
 		ps3.makeBricks(3, 1, 8);
 		ps3.loneSum(3,3,3);
 		ps3.luckySum(1,13,3);
-		ps3.factorialFor(5);
-		ps3.factorialWhile(5);
-		ps3.isPrime(1); 
-		
+		ps3.factorialWithFor(5);
+		ps3.factorialWithWhile(5);
+		ps3.isPrime(1);
 	}
 	
 	/*
@@ -56,17 +55,17 @@ public class ProblemSet3 {
 		int result;
 		if (you <= 2 || date <= 2) {
 			result = 0;
-			System.out.println("NO");
+			System.out.println("NO.");
 		}
 			
 		else if (you >= 8 || date >= 8) {
 			result = 2;
-			System.out.println("YES");
+			System.out.println("YES.");
 		}
 			
 		else {
 			result = 1;
-			System.out.println("MAYBE");
+			System.out.println("MAYBE.");
 		}
 	}
 	
@@ -82,14 +81,14 @@ public class ProblemSet3 {
 	 */
 	
 	public void fizzString(String str) {
-		if (str.charAt(0) == 'f') {
-			System.out.println("FIZZ");
+		if (str.charAt(0) == 'f' && str.charAt(str.length()-1) == 'b') {
+			System.out.println("FIZZBUZZ.");
+		} 
+		else if (str.charAt(0) == 'f') {
+			System.out.println("FIZZ.");
 		}
 		else if (str.charAt(str.length()-1) == 'b') {
-			System.out.println("BUZZ");
-		}
-		else if (str.charAt(0) == 'f' && str.charAt(str.length()-1) == 'b') {
-			System.out.println("FIZZBUZZ");
+			System.out.println("BUZZ.");
 		}
 		else {
 			System.out.println(str);
@@ -110,16 +109,16 @@ public class ProblemSet3 {
 	
 	public void squirrelPlay(int temp, boolean isSummer) {
 		if (temp >= 60 && temp <=100 && isSummer == true) {
-			System.out.println("YES");
+			System.out.println("YES.");
 		}
 		else if (temp >= 60 && temp <=90 && isSummer == true) {
-			System.out.println("NO");
+			System.out.println("NO.");
 		}
 		else if (temp >= 60 && temp <=90 && isSummer == false) {
-			System.out.println("YES");
+			System.out.println("YES.");
 		}
 		else {
-			System.out.println("NO");
+			System.out.println("NO.");
 		}
 	}
 	
@@ -136,13 +135,13 @@ public class ProblemSet3 {
 	
 	public void fizzStringAgain(int n) {
 		if (n % 3 == 0 && n % 5 == 0) {
-			System.out.println("FIZZBUZZ");
+			System.out.println("FIZZBUZZ!");
 		}
 		else if (n % 3 == 0) {
-			System.out.println("FIZZ");
+			System.out.println("FIZZ!");
 		}
 		else if (n % 5 ==0) {
-			System.out.println("BUZZ");
+			System.out.println("BUZZ!");
 		}
 		else {
 			System.out.println(n + "!");
@@ -202,7 +201,7 @@ public class ProblemSet3 {
 		else {
 			total = a + b + c;
 		}
-		System.out.println(total);
+		System.out.println(total + ".");
 	}
 	
 	/*
@@ -219,19 +218,19 @@ public class ProblemSet3 {
 		int total;
 		if (a != 13 && b != 13 && c != 13) {
 			total = a + b + c;
-			System.out.println(total);
+			System.out.println(total + ".");
 		}
 		else if (a == 13) {
 			total = a;
-			System.out.println(total);
+			System.out.println(total + ".");
 		}
 		else if (a != 13 && b == 13) {
 			total = a;
-			System.out.println(total);
+			System.out.println(total + ".");
 		}
 		else if (a != 13 && b != 13 && c ==13) {
 			total = a + b;
-			System.out.println(total);
+			System.out.println(total + ".");
 		}
 	}
 	
@@ -244,12 +243,12 @@ public class ProblemSet3 {
 	 * factorialFor(5) → 120
 	 */
 	
-	public void factorialFor(int n) {
+	public void factorialWithFor(int n) {
 		long x= 1;
 		for (int i = 1; i <= n; i++) {
 			x = i*x;
 		}
-		System.out.println(x);
+		System.out.println(n + "!" +  " = " + x + "." );
 	}
 	
 	/*
@@ -262,7 +261,7 @@ public class ProblemSet3 {
 	 * factorialWhile(5) → 120
 	 */
 	
-	public void factorialWhile(int n) {
+	public void factorialWithWhile(int n) {
 		long x = 1;
         int i = 1;
         while(i<=n)
@@ -270,7 +269,7 @@ public class ProblemSet3 {
             x = x * i;
             i++;
         }
-		System.out.println(x);
+		System.out.println(n + "!" + " = " + x + ".");
 	}
 	
 	/*
@@ -286,7 +285,7 @@ public class ProblemSet3 {
 		boolean isPrime = true;
 		int k;
 		if (n==1 || n == 0) {
-			System.out.println("NOT PRIME");
+			isPrime = false;
 		}
 		for(int i = 2;i <= n/2; i++)
 		{
@@ -297,10 +296,10 @@ public class ProblemSet3 {
 	           }
 		}
 		if(isPrime) {
-			System.out.println("PRIME");
+			System.out.println("PRIME.");
 		}
 		else {
-		   System.out.println("NOT PRIME");
+		   System.out.println("NOT PRIME.");
 		}
 	}
 }
