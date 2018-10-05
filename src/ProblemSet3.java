@@ -31,7 +31,7 @@ public class ProblemSet3 {
 		ps3.loneSum(3,2,3);
 		ps3.luckySum(1,13,3);
 		ps3.factorialWithFor(5);
-		ps3.factorialWithWhile(5);
+		ps3.factorialWithWhile(6);
 		ps3.isPrime(2);
 	}
 	
