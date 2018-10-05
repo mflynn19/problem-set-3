@@ -26,7 +26,7 @@ public class ProblemSet3 {
 		ps3.dateFashion(5,10);
 		ps3.fizzString("buzz");
 		ps3.squirrelPlay(95, true);
-		ps3.fizzStringAgain(15);
+		ps3.fizzStringAgain(14);
 		ps3.makeBricks(3, 1, 10);
 		ps3.loneSum(3,2,3);
 		ps3.luckySum(1,13,3);
