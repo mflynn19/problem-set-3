@@ -32,7 +32,7 @@ public class ProblemSet3 {
 		ps3.luckySum(1,13,3);
 		ps3.factorialFor(5);
 		ps3.factorialWhile(5);
-		ps3.isPrime(1); 
+		ps3.isPrime(144); 
 		
 	}
 	
@@ -286,7 +286,7 @@ public class ProblemSet3 {
 		boolean isPrime = true;
 		int k;
 		if (n==1 || n == 0) {
-			System.out.println("NOT PRIME");
+			isPrime = false;
 		}
 		for(int i = 2;i <= n/2; i++)
 		{
