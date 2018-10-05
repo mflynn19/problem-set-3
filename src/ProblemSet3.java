@@ -28,7 +28,7 @@ public class ProblemSet3 {
 		ps3.squirrelPlay(95, true);
 		ps3.fizzStringAgain(15);
 		ps3.makeBricks(3, 1, 8);
-		ps3.loneSum(3,3,3);
+		ps3.loneSum(3,2,3);
 		ps3.luckySum(1,13,3);
 		ps3.factorialWithFor(5);
 		ps3.factorialWithWhile(5);
